@@ -6,6 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Stack;
 
@@ -50,7 +51,13 @@ public class TestStack {
 
     @Test
     public void testHashMap(){
-        
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("Jarek", 100);
+
+        Assert.assertEquals(map.containsKey("Jarek"), map.containsValue(100));
+
     }
+
+    
 }
 

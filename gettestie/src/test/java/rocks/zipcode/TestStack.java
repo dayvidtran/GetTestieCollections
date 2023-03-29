@@ -82,7 +82,7 @@ public class TestStack {
         vec.add(1);
         vec.add(2);
         int expected = 10;
-        //if we add more than 10 the capacity, from my understanding, increases in increments of 10
+        //if we add more than 10 the capacity, from my understanding, increases in increments of 10 so expected would be 20
         Assert.assertEquals(expected, vec.capacity());
     }
 }

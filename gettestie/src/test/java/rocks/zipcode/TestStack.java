@@ -5,10 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Stack;
+import java.util.*;
 
 public class TestStack {
 
@@ -58,6 +55,35 @@ public class TestStack {
 
     }
 
-    
+    @Test
+    public void testLinkedList(){
+        LinkedList<Integer> linked = new LinkedList<>();
+        Integer addInt = 99;
+        linked.add(addInt);
+
+        Assert.assertTrue(linked.contains(addInt));
+    }
+
+    @Test
+    public void testArrayDeque(){
+        ArrayDeque<Integer> arrDeq = new ArrayDeque<>();
+        arrDeq.add(1);
+        arrDeq.add(2);
+        arrDeq.add(3);
+        Integer expected = 1;
+
+        Assert.assertEquals(expected, arrDeq.getFirst());
+
+    }
+
+    @Test
+    public void testVector(){
+        Vector<Integer>  vec = new Vector<>();
+        vec.add(1);
+        vec.add(2);
+        int expected = 10;
+        //if we add more than 10 the capacity, from my understanding, increases in increments of 10
+        Assert.assertEquals(expected, vec.capacity());
+    }
 }
 

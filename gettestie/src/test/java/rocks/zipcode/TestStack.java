@@ -85,5 +85,75 @@ public class TestStack {
         //if we add more than 10 the capacity, from my understanding, increases in increments of 10 so expected would be 20
         Assert.assertEquals(expected, vec.capacity());
     }
+
+    @Test
+    public void testTreeMap(){
+        TreeMap<String, Integer> tree = new TreeMap<>();
+        tree.put("Milk", 2);
+        boolean expected = false;
+
+        Assert.assertEquals(expected, tree.isEmpty());
+    }
+
+    @Test
+    public void testStack(){
+        Stack<Integer> milk = new Stack<>();
+        milk.add(1);
+        milk.add(2);
+        milk.add(3);
+        milk.add(4);
+
+        Integer actual = milk.peek();
+        Integer expected = milk.elementAt(3);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testTreeSet(){
+        TreeSet<Integer> exampleTree = new TreeSet<>();
+        exampleTree.add(1);
+        exampleTree.add(2);
+        exampleTree.add(3);
+        exampleTree.clear();
+
+        boolean expected = true;
+        assertEquals(expected, exampleTree.isEmpty());
+    }
+
+    @Test
+    public void testIterator() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Hiep");
+        list.add("Nora");
+
+        Assert.assertEquals("Hiep", list.iterator().next());
+    }
+
+    @Test
+    public void testPriorityQueue(){
+        PriorityQueue<String> priorQ = new PriorityQueue<>();
+        priorQ.add("Jarek");
+        priorQ.add("Truong");
+        priorQ.add("Jake");
+        priorQ.add("Zach");
+        priorQ.poll();
+
+        Assert.assertEquals(3, priorQ.size());
+
+    }
+
+    @Test
+    public void testComparable(){
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("a");
+        arrayList.add("b");
+        arrayList.add("c");
+
+        Integer expected = -1;
+        Integer actual = arrayList.get(0).compareTo(arrayList.get(1));
+
+        Assert.assertEquals(expected, actual);
+    }
 }
 
